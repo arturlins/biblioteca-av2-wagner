@@ -5,6 +5,5 @@ def lista_livros():
         {'titulo': 'Dom Casmurro', 'autor': 'Machado de Assis', 'id': 3},
         {'titulo': 'Grande Sertão: Veredas', 'autor': 'João Guimarães Rosa', 'id': 4},
         {'titulo': 'Feliz Ano Novo', 'autor': 'Rubem Fonseca', 'id': 5}
-       
     ]
     return lista
