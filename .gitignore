@@ -1,2 +1,4 @@
 venv/
+gerenciadores/__pycache__/
+entidades/__pycache__/
 biblioteca_singlefile.py
