@@ -11,6 +11,13 @@ def listar_livros():
 def editar_livro():   
     print("Digite o ID de qual cadastro de livro será editado: ")
     listar_livros()
+    while True:
+        try:
+            id = input(int("ID: "))
+            if (id > len(lista_livros)) or (id <= 0):
+                print("ID inválido")
+        except ValueError:
+            print("ID inválido")
 
 
 # excluir livro cadastrado

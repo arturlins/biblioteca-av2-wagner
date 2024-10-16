@@ -15,7 +15,7 @@ def main():
                     editar_livro()
                     break
                 case _:
-                    print("Opção inválida")    
+                    print("Opção inválida")
                     
         except ValueError:
             print("Opção inválida")
