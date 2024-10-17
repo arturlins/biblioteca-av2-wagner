@@ -1,5 +1,4 @@
-from entidades.livros import *
-from gerenciadores.gerenciador_livros import *
+from gerenciadores.gerenciador_livros import listar_livros, cadastrar_livros
 
 def main():
     print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
@@ -12,7 +11,7 @@ def main():
                     listar_livros()
                     break
                 case 2:
-                    editar_livro()
+                    cadastrar_livros()
                     break
                 case _:
                     print("Opção inválida")
