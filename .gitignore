@@ -3,4 +3,5 @@
 /__pycache__/
 *.pyc
 *.pyd
+biblioteca_singlefile.py
 teste.py
