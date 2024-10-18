@@ -8,24 +8,19 @@ def locar_livro():
     while True:
         try:
             id = int(input("Digite o ID de qual cadastro de livro será locado: "))
-            if lista_de_livros[id - 1]['locado'] == True:
+            if id <= 0 or id > len(lista_de_livros):
+                system('cls')
+                listar_livros()
+                print("ID inválido")
+            elif lista_de_livros[id - 1]['locado'] == True:
                 system('cls')
                 print("O livro não pode ser locado no momento")
                 break
-            if lista_de_livros[id - 1]['locado'] == False:
-                if id <= 0:
-                    system('cls')
-                    listar_livros()
-                    print("ID inválido")
-                if id > len(lista_de_livros):
-                    system('cls')
-                    listar_livros()
-                    print("ID inválido")
-                if (id > 0) and (id <= len(lista_de_livros)):
-                    lista_de_livros[id - 1]['locado'] = True
-                    system('cls')
-                    print("Livro locado com sucesso!")
-                    break
+            else:
+                lista_de_livros[id - 1]['locado'] = True
+                system('cls')
+                print("Livro locado com sucesso!")
+                break
         except ValueError:
             system('cls')
             listar_livros()
@@ -37,15 +32,18 @@ def devolver_livro():
     while True:
         try:
             id = int(input("Digite o ID de qual cadastro de livro será devolvido: "))
-            if lista_de_livros[id - 1]['locado'] == False:
+            if id <= 0 or id > len(lista_de_livros):
+                system('cls')
+                listar_livros()
+                print("ID inválido")
+            elif lista_de_livros[id - 1]['locado'] == False:
                 print("O livro não está locado")
-            if lista_de_livros[id - 1]['locado'] == True:
-                if (id > 0) and (id <= len(lista_de_livros)):
-                    lista_de_livros[id - 1]['locado'] = False
-                    system('cls')
-                    print("Livro devolvido com sucesso!")
-                    break
-                if (id > len(lista_de_livros)) or (id <= 0):
-                    print("ID inválido")
+            else:
+                lista_de_livros[id - 1]['locado'] = False
+                system('cls')
+                print("Livro devolvido com sucesso!")
+                break
         except ValueError:
+            system('cls')
+            listar_livros()
             print("ID inválido")
