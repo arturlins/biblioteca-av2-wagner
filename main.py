@@ -1,4 +1,5 @@
 from gerenciadores.gerenciador_usuarios import cadastrar_usuario, login
+from os import system
 
 # Função principal - mostra o menu inicial de login
 def main():
@@ -18,8 +19,10 @@ def main():
                     print("Saindo...")
                     break
                 case _:
+                    system('cls')
                     print("Opção inválida")          
         except ValueError:
+            system('cls')
             print("Opção inválida")
 
 main()

@@ -1,5 +1,6 @@
 from gerenciadores.gerenciador_livros import listar_livros, cadastrar_livros, editar_livro, excluir_livro
 from gerenciadores.gerenciador_locacao import locar_livro, devolver_livro
+from os import system
 
 # Função que cria o menu principal pós-login
 def menu_principal():
@@ -32,7 +33,8 @@ def menu_principal():
                     print("Saindo...")
                     break
                 case _:
-                    print("Opção inválida")
-                    
+                    system('cls')
+                    print("Opção inválida")        
         except ValueError:
+            system('cls')
             print("Opção inválida")
