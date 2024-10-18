@@ -1,21 +1,23 @@
-from gerenciadores.gerenciador_livros import listar_livros, cadastrar_livros
+from gerenciadores.gerenciador_usuarios import cadastrar_usuario, login
 
 def main():
-    print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
-    print("Digite 1 para listar os livros")
     while True:
         try:
+            print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
+            print("1 - Criar cadastro")
+            print("2 - Fazer login")
+            print("3 - Sair do sistema")
             opc = int(input("Selecione a opção: "))
             match opc:
                 case 1:
-                    listar_livros()
-                    break
+                    cadastrar_usuario()
                 case 2:
-                    cadastrar_livros()
+                    login()
+                case 3:
+                    print("Saindo...")
                     break
                 case _:
-                    print("Opção inválida")
-                    
+                    print("Opção inválida")          
         except ValueError:
             print("Opção inválida")
 

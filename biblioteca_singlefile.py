@@ -31,7 +31,7 @@ def editar_livro():
     id = input(int("ID: "))
     while True:
         try:
-            if (id > len(lista_livros)) or (id <= 0):
+            if (id > len(lista_de_livros)) or (id <= 0):
                 print("ID inválido")
         except ValueError:
             print("ID inválido")
