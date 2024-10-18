@@ -1,10 +1,10 @@
 from gerenciadores.gerenciador_usuarios import cadastrar_usuario, login
-from menu_pos_login import menu_pos_login
+from menu_principal import menu_principal
 
 def main():
+    print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
     while True:
-        try:
-            print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
+        try:            
             print("1 - Criar cadastro")
             print("2 - Fazer login")
             print("3 - Sair do sistema")
@@ -18,7 +18,7 @@ def main():
                     print("Saindo...")
                     break
                 case 4:
-                    menu_pos_login()
+                    menu_principal()
                 case _:
                     print("Opção inválida")          
         except ValueError:

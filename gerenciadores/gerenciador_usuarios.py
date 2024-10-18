@@ -1,24 +1,30 @@
 from entidades.usuarios import lista_de_usuarios   
-import menu_pos_login
+import menu_principal
 
 # criar cadastro
 def cadastrar_usuario():
-    usuario = input("Digite o nome de usuário: ")
+    email = input("Digite o e-mail: ")
+    nome = input("Digite o nome de usuário: ")
     senha = input("Digite a senha: ")
 
-    if usuario in lista_de_usuarios:
+    if email in lista_de_usuarios:
         print("Usuário já cadastrado!")
+        menu_principal.menu_principal()
     else:
-        lista_de_usuarios[usuario] = senha  
+        lista_de_usuarios.append({'email': email, 'nome': nome, 'senha': senha})
         print("Usuário cadastrado com sucesso!")
+        print(lista_de_usuarios)
 
 # fazer login
 def login():
-    usuario = input("Digite o nome de usuário: ")
+    email = input("Digite o e-mail cadastrado: ")
     senha = input("Digite a senha: ")
+    for usuario in lista_de_usuarios:
+        if usuario['email'] == email and usuario['senha'] == senha:
+           print(f"Bem-vindo, {usuario['nome']}!")
+           menu_principal.menu_principal()
+        else:
+            print("Senha ou e-mail inválido.")
 
-    if usuario in lista_de_usuarios and lista_de_usuarios[usuario] == senha:
-        print("Login realizado com sucesso!")
-        menu_pos_login()
-    else:
-        print("Usuário ou senha incorretos!")
+
+print

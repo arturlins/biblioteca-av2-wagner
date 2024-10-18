@@ -1,6 +1,6 @@
 from gerenciadores.gerenciador_livros import listar_livros, cadastrar_livros, editar_livro, excluir_livro
 
-def menu_pos_login():
+def menu_principal():
 
     while True:
         try:
