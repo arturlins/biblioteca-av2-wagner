@@ -1,7 +1,10 @@
 /venv/
 /env/
 /__pycache__/
+/entidades/__pycache__/
+/gerenciadores/__pycache__/
 *.pyc
 *.pyd
 biblioteca_singlefile.py
 teste.py
+teste2.py

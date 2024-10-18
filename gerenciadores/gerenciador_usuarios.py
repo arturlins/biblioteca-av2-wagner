@@ -11,6 +11,7 @@ def cadastrar_usuario():
     else:
         lista_de_usuarios[usuario] = senha  
         print("Usuário cadastrado com sucesso!")
+
 # fazer login
 def login():
     usuario = input("Digite o nome de usuário: ")
