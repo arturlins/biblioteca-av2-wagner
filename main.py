@@ -1,4 +1,5 @@
 from gerenciadores.gerenciador_usuarios import cadastrar_usuario, login
+from menu_pos_login import menu_pos_login
 
 def main():
     while True:
@@ -16,6 +17,8 @@ def main():
                 case 3:
                     print("Saindo...")
                     break
+                case 4:
+                    menu_pos_login()
                 case _:
                     print("Opção inválida")          
         except ValueError:

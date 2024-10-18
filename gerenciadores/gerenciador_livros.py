@@ -4,14 +4,14 @@ from entidades.livros import lista_de_livros
 def listar_livros():
     contador = 1
     for i in range (0, len(lista_de_livros)):
-        print(f"ID {lista_de_livros[i]['id']}: Título: {lista_de_livros[i]['titulo']} | Autor: {lista_de_livros[i]['autor']} | Locado: {'Não' if lista_de_livros[i]['locado'] == False else 'Sim'}")
+        print(f"ID {i + 1}: Título: {lista_de_livros[i]['titulo']} | Autor: {lista_de_livros[i]['autor']} | Locado: {'Não' if lista_de_livros[i]['locado'] == False else 'Sim'}")
         contador += 1
 
 # cadastrar livro
 def cadastrar_livros():
     titulo = input("Digite o título do livro: ")
     autor = input("Digite o autor do livro: ")
-    lista_de_livros.append({'titulo': titulo, 'autor': autor, 'id': len(lista_de_livros) + 1, 'locado': False})
+    lista_de_livros.append({'titulo': titulo, 'autor': autor, 'locado': False})
     print(f'Livro cadastrado com sucesso: Título: {titulo} | Autor: {autor}')
     while True:
         try:
