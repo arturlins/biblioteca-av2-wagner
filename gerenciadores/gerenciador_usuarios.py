@@ -1,7 +1,7 @@
 from entidades.usuarios import lista_de_usuarios   
 import menu_principal
 
-# criar cadastro
+# Função para criar cadastro
 def cadastrar_usuario():
     email = input("Digite o e-mail: ")
     nome = input("Digite o nome de usuário: ")
@@ -13,18 +13,16 @@ def cadastrar_usuario():
     else:
         lista_de_usuarios.append({'email': email, 'nome': nome, 'senha': senha})
         print("Usuário cadastrado com sucesso!")
-        print(lista_de_usuarios)
 
-# fazer login
+# Função para fazer login
 def login():
     email = input("Digite o e-mail cadastrado: ")
     senha = input("Digite a senha: ")
+    validador = 0
     for usuario in lista_de_usuarios:
         if usuario['email'] == email and usuario['senha'] == senha:
            print(f"Bem-vindo, {usuario['nome']}!")
            menu_principal.menu_principal()
-        else:
-            print("Senha ou e-mail inválido.")
-
-
-print
+           validador = 1
+    if validador == 0:
+        print("Senha ou e-mail inválido.")

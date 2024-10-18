@@ -1,6 +1,7 @@
 from gerenciadores.gerenciador_livros import listar_livros, cadastrar_livros, editar_livro, excluir_livro
 from gerenciadores.gerenciador_locacao import locar_livro, devolver_livro
 
+# Função que cria o menu principal pós-login
 def menu_principal():
 
     while True:

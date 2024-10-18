@@ -1,6 +1,6 @@
 from gerenciadores.gerenciador_usuarios import cadastrar_usuario, login
-from menu_principal import menu_principal
 
+# Função principal - mostra o menu inicial de login
 def main():
     print("Bem-vindo ao Sistema de Biblioteca do CESMAC\nEscolha uma opção abaixo: ")
     while True:
@@ -17,8 +17,6 @@ def main():
                 case 3:
                     print("Saindo...")
                     break
-                case 4:
-                    menu_principal()
                 case _:
                     print("Opção inválida")          
         except ValueError:

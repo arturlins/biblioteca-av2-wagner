@@ -1,11 +1,11 @@
 from entidades.livros import lista_de_livros
 
-# listar livros cadastrados
+# Função para listar livros cadastrados
 def listar_livros():
     for i in range (0, len(lista_de_livros)):
         print(f"ID {i + 1}: Título: {lista_de_livros[i]['titulo']} | Autor: {lista_de_livros[i]['autor']} | Locado: {'Não' if lista_de_livros[i]['locado'] == False else 'Sim'}")
 
-# cadastrar livro
+# Função para cadastrar um novo livro
 def cadastrar_livros():
     titulo = input("Digite o título do livro: ")
     autor = input("Digite o autor do livro: ")
@@ -23,7 +23,7 @@ def cadastrar_livros():
         except ValueError:
             print("Valor inválido, digite 1 para cadastrar um novo autor ou 2 para ir para o menu principal")
 
-# editar livro cadastrado
+# Função para editar livro cadastrado
 def editar_livro():
     listar_livros()
     while True:
@@ -42,7 +42,7 @@ def editar_livro():
             print("ID inválido")
 
 
-# excluir livro cadastrado
+# Função para excluir um livro cadastrado da lista
 def excluir_livro():   
     listar_livros()
     while True:
